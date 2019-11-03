@@ -2,7 +2,6 @@ import numpy as np # linear algebra
 import torch
 import torch.nn.functional as F
 from enum import Enum
-import matplotlib.pyplot as plt
 
 
 class SimpleClassificationModel():

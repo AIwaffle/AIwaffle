@@ -24,7 +24,7 @@ class LogisticRegressionModel:
         self.dW = np.zeros(self.W.shape)
         self.db = 0
         
-    def compute_loss(self):
+    def compute_loss(self):# of no use currently
         self.loss = self.Y * np.log(self.A) + (1 - self.Y) * np.log(1 - self.A)
         return self.loss
     

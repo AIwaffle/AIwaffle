@@ -16,15 +16,17 @@ class LogisticRegressionModel:
     def sigmoid(self, x):
         return 1 / (1 + math.e ** (-x))
     
-    def forward(self):
+    def forward(self, X):
+        self.X = X
         self.A = self.sigmoid(np.dot(self.W.T, self.X) + self.b)
         return self.A
     
-    def clear_grad(self):
+    def clear_grad(self):# of no use currently
         self.dW = np.zeros(self.W.shape)
         self.db = 0
         
-    def compute_loss(self):# of no use currently
+    def compute_loss(self, Y):
+        self.Y = Y
         self.loss = self.Y * np.log(self.A) + (1 - self.Y) * np.log(1 - self.A)
         return self.loss
     
@@ -32,20 +34,18 @@ class LogisticRegressionModel:
         self.dW = (self.A - self.Y) * self.X
         self.db = (self.A - self.Y)
         
-    def optimize():
+    def optimize(self):
         self.W = self.W - self.learningRate * self.dW
         self.b = self.b - self.learningRate * self.db
         
-    def load_data(self, X, Y):
-        self.X = X
-        self.Y = Y
         
 # demonstration
 model = LogisticRegressionModel()
-model.load_data(np.array([1, 2]), 1)
-model.forward()
+model.forward(np.array([1, 2]))
 print(model.A, model.W, model.dW, model.b, model.db)
-model.compute_loss()
+model.compute_loss(1)
 print(model.loss)
 model.backward()
+print(model.A, model.W, model.dW, model.b, model.db)
+model.optimize()
 print(model.A, model.W, model.dW, model.b, model.db)

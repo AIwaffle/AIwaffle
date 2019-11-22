@@ -1,6 +1,8 @@
 # New Functional Version!
 [Online Example](https://www.kaggle.com/idiott/logistic-regression-functional)
 
+---
+
 # Logistic Regression Documentation (for obsolete version)
 ## Basic usage pipeline
 1. __init__()

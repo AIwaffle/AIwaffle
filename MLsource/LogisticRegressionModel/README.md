@@ -1,11 +1,14 @@
-# LogicRegression Documentation
+# New Functional Version!
+[Online Example](https://www.kaggle.com/idiott/logistic-regression-functional)
+
+# Logistic Regression Documentation (for obsolete version)
 ## Basic usage pipeline
 1. __init__()
 2. forward(X)
 3. compute_loss(Y)
 4. backward()
 5. optimize()
-
+l
 loop over 2, 3, 4, 5 over training data to train
 ## Things to display
 ### hyperparameters

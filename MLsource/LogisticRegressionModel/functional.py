@@ -5,14 +5,15 @@ from matplotlib import pyplot as plt
 def sigmoid(x):
     return 1 / (1 + math.e ** (-x))
 
-def forward(X, W):    
+def forward(X, W):
     Z = np.dot(W, X)
     A = sigmoid(Z)
     return A
 
 def backward(W, A, Y, learning_rate):
-    W = W + learning_rate * np.sum((Y - A) * X, axis=1)
-    return W
+    dW = np.sum((A - Y) * X, axis=1)
+    W = W - learning_rate * dW
+    return W, dW
     
 def compute_loss(A, Y):
     loss = np.sum(Y * np.log(A) + (1 - Y) * np.log(1 - A))
@@ -56,6 +57,6 @@ X = np.vstack((np.ones((1, m)), X))
 for epoch in range(10000):
     A = forward(X, W)
     #print(compute_loss(A, Y), evaluate(X, W, Y))
-    W = backward(W, A, Y, 0.01)
+    W, _ = backward(W, A, Y, 0.01)
     
 plot_decision_boundary(forward, X, W, Y)

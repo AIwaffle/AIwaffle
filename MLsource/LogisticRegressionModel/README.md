@@ -20,8 +20,8 @@ Why n + 1? If we stack a line of ones on the top of X, then the first element in
 A (predicted): shape = (1, m)**
 
 ## Basic Usage Pipeline In 1 Epoch
-1. forward(X, W)
-2. backward(W, A, Y, learning_rate)
+1. forward(X, W) -> A
+2. backward(W, A, Y, learning_rate) -> W(updated), dW
 3. (optional) compute_loss(A, Y) - returns loss
 4. (optional) evaluate(X, W, Y) - returns accuracy
 

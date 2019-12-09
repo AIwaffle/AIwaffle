@@ -1,7 +1,7 @@
 import numpy as np
-from matplotlib import pyplot as plt
 
-def generate_data(size, k, b, noise = 0.):
+
+def generate_data(size, k, b, noise=0.):
     data = np.random.rand(size, 3)
     for i in range(size):
         if i <= size * (1 - noise):
@@ -11,6 +11,7 @@ def generate_data(size, k, b, noise = 0.):
     np.random.shuffle(data)
     return data
 
+
 # demo
-data = generate_data(100, 1, 0, noise=0.2)
-plt.scatter(data[:, 0], data[:, 1], c = data[:, 2])
+if __name__ == '__main__':
+    data = generate_data(100, 1, 0, noise=0.2)

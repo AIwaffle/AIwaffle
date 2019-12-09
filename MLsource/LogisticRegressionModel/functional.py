@@ -43,20 +43,21 @@ def plot_decision_boundary(model, X, W, Y):
     plt.xlabel('x1')
     plt.scatter(X[1, :], X[2, :], c=Y.ravel(), cmap=plt.cm.Spectral)
 
-X = data.T[0:2, :]
-Y = data.T[2, :]
-Y = Y.reshape((1, -1))
-print(X.shape, Y.shape)
-n = X.shape[0]
-m = X.shape[1]
-W = np.random.randn(1, n + 1)
-print(W.shape)
-X = np.vstack((np.ones((1, m)), X))
+if __name__ == '__main__':
+    X = data.T[0:2, :]
+    Y = data.T[2, :]
+    Y = Y.reshape((1, -1))
+    print(X.shape, Y.shape)
+    n = X.shape[0]
+    m = X.shape[1]
+    W = np.random.randn(1, n + 1)
+    print(W.shape)
+    X = np.vstack((np.ones((1, m)), X))
 
-# train
-for epoch in range(10000):
-    A = forward(X, W)
-    #print(compute_loss(A, Y), evaluate(X, W, Y))
-    W, _ = backward(W, A, Y, 0.01)
-    
-plot_decision_boundary(forward, X, W, Y)
+    # train
+    for epoch in range(10000):
+        A = forward(X, W)
+        #print(compute_loss(A, Y), evaluate(X, W, Y))
+        W, _ = backward(W, A, Y, 0.01)
+
+    plot_decision_boundary(forward, X, W, Y)   

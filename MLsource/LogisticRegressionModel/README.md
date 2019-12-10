@@ -13,7 +13,7 @@ In the online example, n = 2, m = 100
 If you want to go though your data one by one, let m = 1
 
 **X (input): shape = (n + 1, m)  
-W (weights): shape = (1, n + 1)**  
+W & dW (weights): shape = (1, n + 1)**  
 Why n + 1? If we stack a line of ones on the top of X, then the first element in W serves as a bias.
 
 **Y (ground truth): shape = (1, m)  

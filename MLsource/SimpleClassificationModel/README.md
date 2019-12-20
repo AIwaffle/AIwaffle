@@ -28,8 +28,8 @@ backward() must be called before optimize()
 get_params() and get_grads() returns List[`ndarray`] of the same shape,
 Careful: weights and bias are seperated, so the list is of length 2 * linearLayerCount
 
-The model auto inserted one ReLU layer between every 2 linear layers
+The model auto inserted one `ReLU` layer between every 2 linear layers
 Consequently the return value of forward() contains all activations including
-ReLU layers.
+`ReLU` layers.
 
-You can use print(model) to check the overall structure of the model
+You can use `print(model)` to check the overall structure of the model

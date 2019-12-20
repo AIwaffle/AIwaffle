@@ -39,6 +39,7 @@ class SimpleClassificationNetwork(nn.Sequential):
         if type(X) == np.ndarray:
             X = torch.tensor(X)
         
+        self.optimizer.zero_grad()
         out = [X.numpy().copy()]
         for i, module in enumerate(self._modules.values()):
             if type(module) == nn.CrossEntropyLoss:# special case, thanks to pytorch mechanics

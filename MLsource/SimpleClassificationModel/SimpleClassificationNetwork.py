@@ -1,3 +1,6 @@
+import numpy as np, torch
+from torch import nn
+
 class SimpleClassificationNetwork(nn.Sequential):
     
     def __init__(self, size_list, learning_rate=0.01):

@@ -106,7 +106,8 @@ class SimpleClassificationNetwork(nn.Sequential):
 if __name__ == '__main__':
     model = SimpleClassificationNetwork([2, 4, 3])
     for i in range(100):
-        model.forward(torch.tensor([[1.0, 2.0]]))
+        # model.forward(torch.tensor([[1.0, 2.0]]))
+        model.forward(np.array([[1.0, 2.0]]).astype("float32"))
         loss = model.compute_loss(torch.tensor([1]))
         model.backward()
         model.optimize()

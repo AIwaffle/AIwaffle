@@ -43,12 +43,16 @@ class LogisticRegressionModel:
                 loss.append(model.compute_loss(self.A, self.Y))
                 eval_.append(model.evaluate(self.X, self.W, self.Y))
             self.W, self.dW = model.backward(self.W, self.A, self.Y, self.X, learning_rate)
-        res = dict(loss=loss, eval=eval_)
-        for attr in ["W", "dW", "A"]:
+        res = dict(loss=loss, eval=eval_,
+                   avg_loss=sum(loss) / len(loss))
+        for attr in ["W", "dW"]:
             v = self.__getattribute__(attr)
             if isinstance(v, np.ndarray):
+                while not len(v.shape) == 3:
+                    v = v[np.newaxis, :]
                 v = v.tolist()
             res.update({attr: v})
+        res.update(A=self.A.tolist())
         return res
 
 

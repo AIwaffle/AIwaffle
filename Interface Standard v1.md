@@ -1,4 +1,4 @@
-﻿# Interface Standard
+# Interface Standard
 ### Abbreviations:
 * W: weights
 * b: bias
@@ -30,14 +30,31 @@ See [code annotation](https://github.com/IDl0T/AIwaffle/blob/master/MLsource/Sim
 | train | `step`, `data`: data includes input and ground truth |
 | predict | `input` |
 
+### Front End Abbreviations：
+
+- layers: a list of depths for each layer (including the input and output layers)
+- model:
+
+| Name            | format        |
+| --------------- | ------------- |
+| weights (W)     | `float[][][]` |
+| activations (A) | `float[][]`   |
+| cost            | `float`       |
+
+- model_name: name of a type of model (eg. `"housing price predictor"`)
+
 ## Backend -> Frontend
+
 |  |  |
 |--|--|
 |  |  |
 
 ## Frontend -> Backend
-|  |  |
-|--|--|
-|  |  |
 
+| Operation | Parameters             | Description                                 |
+| --------- | ---------------------- | ------------------------------------------- |
+| new_model | `model_name`-> `model` | Create a new model of the type `model_name` |
+| iterate   | () -> `model`          | Do one iteration on the model               |
+
+In the tutorial setting, I think all the training data should be stored in the backend and the frontend is used to select which type of model to display and calling next iteration on user's demand.
 

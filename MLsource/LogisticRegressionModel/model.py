@@ -4,7 +4,7 @@ import pprint
 import numpy as np
 
 import AIwaffle.MLsource.LogisticRegressionModel.DataGenerator as data_gen
-import AIwaffle.MLsource.LogisticRegressionModel.functional as model
+import AIwaffle.MLsource.LogisticRegressionModel.functional as l_model
 
 
 class LogisticRegressionModel:
@@ -38,17 +38,17 @@ class LogisticRegressionModel:
         self.X = np.vstack((np.ones((1, self.m)), self.X))
 
     def forward(self) -> np.ndarray:
-        self.A = model.forward(self.X, self.W)
+        self.A = l_model.forward(self.X, self.W)
         return self.A
 
     def compute_loss(self) -> float:
-        return model.compute_loss(self.A, self.Y)
+        return l_model.compute_loss(self.A, self.Y)
 
     def evaluate(self) -> float:
-        return model.evaluate(self.X, self.W, self.Y)
+        return l_model.evaluate(self.X, self.W, self.Y)
 
     def backward(self, learning_rate: float = 0.01) -> tuple:
-        return model.backward(self.W, self.A, self.Y, self.X, learning_rate)
+        return l_model.backward(self.W, self.A, self.Y, self.X, learning_rate)
 
     def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
         # self.generate_data()
@@ -62,7 +62,7 @@ class LogisticRegressionModel:
             eval_.append(self.evaluate())
             self.W, self.dW = self.backward(learning_rate)
         res = dict(
-            X=self.X.tolist(),
+            X=self.X[1:].tolist(),
             Y=self.Y.tolist(),
             loss=loss,
             eval=eval_,
@@ -79,7 +79,6 @@ class LogisticRegressionModel:
 
 
 if __name__ == '__main__':
-    import json
     pp = pprint.PrettyPrinter(indent=4)
     m = LogisticRegressionModel()
     pp.pprint(m.iterate())

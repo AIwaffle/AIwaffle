@@ -1,4 +1,5 @@
 import random
+import pprint
 
 import numpy as np
 
@@ -33,29 +34,48 @@ class LogisticRegressionModel:
         self.m = self.X.shape[1]
         self.X = np.vstack((np.ones((1, self.m)), self.X))
 
-    def iterate(self, learning_rate=0.01) -> dict:
+    def forward(self) -> np.ndarray:
+        self.A = model.forward(self.X, self.W)
+        return self.A
+
+    def compute_loss(self) -> float:
+        return model.compute_loss(self.A, self.Y)
+
+    def evaluate(self) -> float:
+        return model.evaluate(self.X, self.W, self.Y)
+
+    def backward(self, learning_rate: float = 0.01) -> tuple:
+        return model.backward(self.W, self.A, self.Y, self.X, learning_rate)
+
+    def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
         self.generate_data()
+        a = list()
         loss = list()
         eval_ = list()
-        for epoch in range(1000):
-            self.A = model.forward(self.X, self.W)
-            if epoch % 50 == 0:
-                loss.append(model.compute_loss(self.A, self.Y))
-                eval_.append(model.evaluate(self.X, self.W, self.Y))
-            self.W, self.dW = model.backward(self.W, self.A, self.Y, self.X, learning_rate)
-        res = dict(loss=loss, eval=eval_,
-                   avg_loss=sum(loss) / len(loss))
-        for attr in ["W", "dW"]:
+        for epoch in range(epoch_num):
+            self.forward()
+            a.append(self.A.tolist())
+            loss.append(self.compute_loss())
+            eval_.append(self.evaluate())
+            self.W, self.dW = self.backward(learning_rate)
+        res = dict(
+            X=self.X.tolist(),
+            Y=self.Y.tolist(),
+            loss=loss,
+            eval=eval_,
+            avg_loss=sum(loss) / len(loss),
+            A=a)
+        for attr in ["W", "dW"]:  # Make W and dW 3-dimension
             v = self.__getattribute__(attr)
             if isinstance(v, np.ndarray):
                 while not len(v.shape) == 3:
                     v = v[np.newaxis, :]
                 v = v.tolist()
             res.update({attr: v})
-        res.update(A=self.A.tolist())
         return res
 
 
 if __name__ == '__main__':
+    pp = pprint.PrettyPrinter(indent=4)
     m = LogisticRegressionModel()
-    print(m.iterate())
+    pp.pprint(m.iterate())

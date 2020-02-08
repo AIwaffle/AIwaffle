@@ -28,10 +28,10 @@ class SimpleClassificationNetwork(nn.Sequential):
         self.Y_pred = None
         self.loss = None
 
-    def __call__(self, X):
+    def __call__(self, X) -> list:
         return self.forward(X)
 
-    def forward(self, X):
+    def forward(self, X) -> list:
         """Forward propagation
         Args:
             X: an 2D input Tensor/ndarray with shape (`batchsize`, `inputsize`)
@@ -55,7 +55,7 @@ class SimpleClassificationNetwork(nn.Sequential):
         self.Y_pred = X
         return out
 
-    def compute_loss(self, Y):
+    def compute_loss(self, Y) -> float:
         """Compute the loss
         Args:
             Y: the Tensor/ndarray storing ground truth, same length as Y_pred (in dimension 1),
@@ -77,7 +77,7 @@ class SimpleClassificationNetwork(nn.Sequential):
     def optimize(self):
         self.optimizer.step()
 
-    def get_params(self):
+    def get_params(self) -> list:
         """get the parameters
         Returns:
             parameters: a list[ndarray], containing the parameters of each layer.
@@ -90,7 +90,7 @@ class SimpleClassificationNetwork(nn.Sequential):
             parameters.append(param.data.detach().numpy().copy())
         return parameters
 
-    def get_grads(self):
+    def get_grads(self) -> list:
         """get the gradients
         Returns:
             gradients: a list[ndarray] containing the grads of each layer,
@@ -106,7 +106,8 @@ class SimpleClassificationNetwork(nn.Sequential):
 if __name__ == '__main__':
     model = SimpleClassificationNetwork([2, 4, 3])
     for i in range(100):
-        model.forward(torch.tensor([[1.0, 2.0]]))
+        # model.forward(torch.tensor([[1.0, 2.0]]))
+        model.forward(np.array([[1.0, 2.0]]).astype("float32"))
         loss = model.compute_loss(torch.tensor([1]))
         model.backward()
         model.optimize()

@@ -13,8 +13,11 @@ class LogisticRegressionModel:
     """
 
     def __init__(self):
+        # Random data seed
         self.k = (random.random() - 0.5) * 1e+9
         self.b = -0.5 * (self.k - 1)
+
+        # Written according to functional.py
         self.Y = None
         self.X = None
         self.data = None
@@ -48,7 +51,7 @@ class LogisticRegressionModel:
         return model.backward(self.W, self.A, self.Y, self.X, learning_rate)
 
     def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
-        self.generate_data()
+        # self.generate_data()
         a = list()
         loss = list()
         eval_ = list()
@@ -76,6 +79,7 @@ class LogisticRegressionModel:
 
 
 if __name__ == '__main__':
+    import json
     pp = pprint.PrettyPrinter(indent=4)
     m = LogisticRegressionModel()
     pp.pprint(m.iterate())

@@ -52,12 +52,12 @@ class LogisticRegressionModel:
 
     def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
         # self.generate_data()
-        a = list()
+        # a = list()
         loss = list()
         eval_ = list()
         for epoch in range(epoch_num):
             self.forward()
-            a.append(self.A.tolist())
+            # a.append(self.A.tolist())
             loss.append(self.compute_loss())
             eval_.append(self.evaluate())
             self.W, self.dW = self.backward(learning_rate)
@@ -65,9 +65,10 @@ class LogisticRegressionModel:
             X=self.X[1:].tolist(),
             Y=self.Y.tolist(),
             loss=loss,
-            eval=eval_,
+            accuracy=eval_,
             avg_loss=sum(loss) / len(loss),
-            A=a)
+            # A=a
+        )
         for attr in ["W", "dW"]:  # Make W and dW 3-dimension
             v = self.__getattribute__(attr)
             if isinstance(v, np.ndarray):

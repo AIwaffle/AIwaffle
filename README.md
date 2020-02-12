@@ -12,7 +12,7 @@ https://github.com/AlienKevin/AIWaffle-website
 https://github.com/jimmy-zx/AIwaffle_Server1
     
 ## TODOs: (in order)
--[x] Connect the page to the server
+- [x] Connect the page to the server
 -[x] Make a HomePage
 -[ ] Add more features:   
 e.g.  

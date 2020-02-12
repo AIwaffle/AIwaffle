@@ -51,12 +51,23 @@ class LogisticRegressionModel:
         return l_model.backward(self.W, self.A, self.Y, self.X, learning_rate)
 
     def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
+        """Iterate some epochs
+
+        TODO
+
+        Args:
+            learning_rate ():
+            epoch_num ():
+
+        Returns:
+
+        """
         # self.generate_data()
         loss = list()
         eval_ = list()
         for epoch in range(epoch_num):
             self.forward()
-            loss.append(self.compute_loss())
+            loss.append(-self.compute_loss())  # Flipped
             eval_.append(self.evaluate())
             self.W, self.dW = self.backward(learning_rate)
         res = dict(
@@ -96,8 +107,13 @@ def plot_data(model: LogisticRegressionModel):
     plt.show()
 
 
+def plot_result(model: LogisticRegressionModel):
+    l_model.plot_decision_boundary(l_model.forward, model.X, model.W, model.Y)
+
+
 if __name__ == '__main__':
     pp = pprint.PrettyPrinter(indent=4)
     m = LogisticRegressionModel()
-    for i in range(10):
-        print(m.iterate()["avg_loss"])
+    res = m.iterate(epoch_num=1000)
+    pp.pprint(res["A"])
+    plot_result(m)

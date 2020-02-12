@@ -1,3 +1,4 @@
+import math
 import random
 import pprint
 
@@ -14,7 +15,11 @@ class LogisticRegressionModel:
 
     def __init__(self):
         # Random data seed
-        self.k = (random.random() - 0.5) * 1e+9
+        # self.k = (random.random() - 0.5) * 1e+9
+        self.k = math.tan(random.uniform(
+            math.atan(-1e9),
+            math.atan(1e9)
+        ))
         self.b = -0.5 * (self.k - 1)
 
         # Written according to functional.py

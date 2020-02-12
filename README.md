@@ -1,5 +1,5 @@
 # AIwaffle
-an AI Learning Platform completely made by high school students
+**an AI Learning Platform completely made by high school students**
 
 ## Collaborators:
 ### Machine learning code: IDIOT (Alan Wu)

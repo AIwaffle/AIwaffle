@@ -52,12 +52,10 @@ class LogisticRegressionModel:
 
     def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
         # self.generate_data()
-        # a = list()
         loss = list()
         eval_ = list()
         for epoch in range(epoch_num):
             self.forward()
-            # a.append(self.A.tolist())
             loss.append(self.compute_loss())
             eval_.append(self.evaluate())
             self.W, self.dW = self.backward(learning_rate)
@@ -67,7 +65,7 @@ class LogisticRegressionModel:
             loss=loss,
             accuracy=eval_,
             avg_loss=sum(loss) / len(loss),
-            # A=a
+            A=self.A.tolist(),
         )
         for attr in ["W", "dW"]:  # Make W and dW 3-dimension
             v = self.__getattribute__(attr)
@@ -79,7 +77,27 @@ class LogisticRegressionModel:
         return res
 
 
+def plot_data(model: LogisticRegressionModel):
+    # TODO: Use numpy (?)
+    x1 = list()
+    y1 = list()
+    x2 = list()
+    y2 = list()
+    for i in range(len(model.X[0])):
+        if model.Y[0][i] == 1.0:
+            x1.append(model.X[1][i])
+            y1.append(model.X[2][i])
+        else:
+            x2.append(model.X[1][i])
+            y2.append(model.X[2][i])
+    import matplotlib.pyplot as plt
+    plt.scatter(x1, y1, color="red")
+    plt.scatter(x2, y2, color="blue")
+    plt.show()
+
+
 if __name__ == '__main__':
     pp = pprint.PrettyPrinter(indent=4)
     m = LogisticRegressionModel()
-    pp.pprint(m.iterate())
+    for i in range(10):
+        print(m.iterate()["avg_loss"])

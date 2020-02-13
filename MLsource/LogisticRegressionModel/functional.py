@@ -32,23 +32,24 @@ def evaluate(X, W, Y):
     return accuracy
 
 
-# def plot_decision_boundary(model, X, W, Y):
-#     from matplotlib import pyplot as plt
-#     # Set min and max values and give it some padding
-#     x_min, x_max = X[1, :].min() - 0.1, X[1, :].max() + 0.1
-#     y_min, y_max = X[2, :].min() - 0.1, X[2, :].max() + 0.1
-#     h = 0.01
-#     # Generate a grid of points with distance h between them
-#     xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
-#     # Predict the function value for the whole grid
-#     # print(np.zeros((1, xx.ravel().shape[0])).shape, xx.ravel().shape)
-#     Z = model((np.c_[np.ones(xx.ravel().shape[0]), xx.ravel(), yy.ravel()]).T, W)
-#     Z = Z.reshape(xx.shape)
-#     # Plot the contour and training examples
-#     plt.contourf(xx, yy, Z, cmap=plt.cm.Spectral)
-#     plt.ylabel('x2')
-#     plt.xlabel('x1')
-#     plt.scatter(X[1, :], X[2, :], c=Y.ravel(), cmap=plt.cm.Spectral)
+def plot_decision_boundary(model, X, W, Y):
+    from matplotlib import pyplot as plt
+    # Set min and max values and give it some padding
+    x_min, x_max = X[1, :].min() - 0.1, X[1, :].max() + 0.1
+    y_min, y_max = X[2, :].min() - 0.1, X[2, :].max() + 0.1
+    h = 0.01
+    # Generate a grid of points with distance h between them
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+    # Predict the function value for the whole grid
+    # print(np.zeros((1, xx.ravel().shape[0])).shape, xx.ravel().shape)
+    Z = model((np.c_[np.ones(xx.ravel().shape[0]), xx.ravel(), yy.ravel()]).T, W)
+    Z = Z.reshape(xx.shape)
+    # Plot the contour and training examples
+    plt.contourf(xx, yy, Z, cmap=plt.cm.Spectral)
+    plt.ylabel('x2')
+    plt.xlabel('x1')
+    plt.scatter(X[1, :], X[2, :], c=Y.ravel(), cmap=plt.cm.Spectral)
+    plt.show()
 
 
 if __name__ == '__main__':

@@ -1,3 +1,4 @@
+import math
 import random
 import pprint
 
@@ -14,7 +15,11 @@ class LogisticRegressionModel:
 
     def __init__(self):
         # Random data seed
-        self.k = (random.random() - 0.5) * 1e+9
+        # self.k = (random.random() - 0.5) * 1e+9
+        self.k = math.tan(random.uniform(
+            math.atan(-1e9),
+            math.atan(1e9)
+        ))
         self.b = -0.5 * (self.k - 1)
 
         # Written according to functional.py
@@ -51,23 +56,33 @@ class LogisticRegressionModel:
         return l_model.backward(self.W, self.A, self.Y, self.X, learning_rate)
 
     def iterate(self, learning_rate: float = 0.01, epoch_num: int = 1) -> dict:
+        """Iterate some epochs
+
+        TODO
+
+        Args:
+            learning_rate ():
+            epoch_num ():
+
+        Returns:
+
+        """
         # self.generate_data()
-        a = list()
         loss = list()
         eval_ = list()
         for epoch in range(epoch_num):
             self.forward()
-            a.append(self.A.tolist())
-            loss.append(self.compute_loss())
+            loss.append(-self.compute_loss())  # Flipped
             eval_.append(self.evaluate())
             self.W, self.dW = self.backward(learning_rate)
         res = dict(
             X=self.X[1:].tolist(),
             Y=self.Y.tolist(),
             loss=loss,
-            eval=eval_,
+            accuracy=eval_,
             avg_loss=sum(loss) / len(loss),
-            A=a)
+            A=self.A.tolist(),
+        )
         for attr in ["W", "dW"]:  # Make W and dW 3-dimension
             v = self.__getattribute__(attr)
             if isinstance(v, np.ndarray):
@@ -78,7 +93,32 @@ class LogisticRegressionModel:
         return res
 
 
+def plot_data(model: LogisticRegressionModel):
+    # TODO: Use numpy (?)
+    x1 = list()
+    y1 = list()
+    x2 = list()
+    y2 = list()
+    for i in range(len(model.X[0])):
+        if model.Y[0][i] == 1.0:
+            x1.append(model.X[1][i])
+            y1.append(model.X[2][i])
+        else:
+            x2.append(model.X[1][i])
+            y2.append(model.X[2][i])
+    import matplotlib.pyplot as plt
+    plt.scatter(x1, y1, color="red")
+    plt.scatter(x2, y2, color="blue")
+    plt.show()
+
+
+def plot_result(model: LogisticRegressionModel):
+    l_model.plot_decision_boundary(l_model.forward, model.X, model.W, model.Y)
+
+
 if __name__ == '__main__':
     pp = pprint.PrettyPrinter(indent=4)
     m = LogisticRegressionModel()
-    pp.pprint(m.iterate())
+    res = m.iterate(epoch_num=1000)
+    pp.pprint(res["A"])
+    plot_result(m)

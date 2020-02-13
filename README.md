@@ -1,4 +1,4 @@
-# AIwaffle
+# AIwaffle http://106.15.39.117:8080
 **an AI Learning Platform completely made by high school students**
 
 ## Collaborators:

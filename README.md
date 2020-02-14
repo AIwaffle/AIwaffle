@@ -14,7 +14,7 @@ https://github.com/jimmy-zx/AIwaffle_Server1
 ## TODOs: (in order)
 - [x] Connect the page to the server
 - [x] Make a HomePage
-- [ ] Add more features:   
+- [x] Add more features:   
 e.g.  
 Add a line chart tracing the real-time loss  
 ![image.png](https://i.loli.net/2019/12/18/SspIToRd6U13mE5.png)  

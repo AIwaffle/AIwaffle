@@ -1,5 +1,5 @@
 # AIwaffle http://106.15.39.117:8080
-**an AI Learning Platform completely made by high school students**
+**an AI Learning Platform completely made by high school students**  
 Total Clicks: http://106.15.39.117:8080/api/statistics/total
 
 ## Collaborators:

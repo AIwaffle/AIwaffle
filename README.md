@@ -1,6 +1,6 @@
 # AIwaffle
 **an AI Learning Platform completely made by high school students**  
-Total Clicks: http://106.15.39.117:8080/api/statistics/total
+Total Clicks: http://106.15.39.117:8080/api/statistics/total  
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 
 ## Collaborators:

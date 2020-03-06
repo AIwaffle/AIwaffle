@@ -11,6 +11,6 @@ Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 [AlienKevin](https://github.com/AlienKevin) (Kevin Li)
         
 ### Backend: 
-[Jimmy Zx](https://github.com/jimmy-zx) (Jimmy Zhao)
+[Jimmy Zx](https://github.com/jimmy-zx) (Jimmy Zhao)  
 [wlt233](https://github.com/wlt233)
     

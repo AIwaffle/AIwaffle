@@ -1,6 +1,7 @@
 ![image.png](https://i.loli.net/2020/03/06/GbHBqouLYRN5r4M.png) 
 # AIwaffle
 **an AI Learning Platform completely made by high school students**  
+Course site: http://106.15.39.117:8080
 Total Clicks: http://106.15.39.117:8080/api/statistics/total  
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 

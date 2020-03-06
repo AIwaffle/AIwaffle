@@ -4,22 +4,13 @@ Total Clicks: http://106.15.39.117:8080/api/statistics/total
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 
 ## Collaborators:
-### Machine learning code: IDIOT (Alan Wu)
-<https://github.com/IDl0T/AIwaffle/tree/master/MLsource>
+### Machine learning code: 
+[IDl0T](https://github.com/IDl0T) (Yulun Wu)
         
-### Frontend: AlienKevin (Kevin Li)
-https://github.com/AlienKevin/AIWaffle-website
+### Frontend: 
+[AlienKevin](https://github.com/AlienKevin) (Kevin Li)
         
-### Backend: Jimmy Z (Jimmy Zhao)
-https://github.com/jimmy-zx/AIwaffle_Server1
+### Backend: 
+[Jimmy Zx](https://github.com/jimmy-zx) (Jimmy Zhao)
+[wlt233](https://github.com/wlt233)
     
-## TODOs: (in order)
-- [x] Connect the page to the server
-- [x] Make a HomePage
-- [x] Add more features:   
-e.g.  
-Add a line chart tracing the real-time loss  
-![image.png](https://i.loli.net/2019/12/18/SspIToRd6U13mE5.png)  
-- [ ] Find out how to prevent the free riders problem (e.g. set up quotas)  
-- [ ] Make more courses  
-- [ ] Gather useful resources for AI learners  

@@ -8,8 +8,8 @@ Total Clicks: http://106.15.39.117:8080/api/statistics/total
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 
 ## Collaborators:
-[IDl0T](https://github.com/IDl0T) (Yulun Wu)
-[AlienKevin](https://github.com/AlienKevin) (Kevin Li)
+[IDl0T](https://github.com/IDl0T) (Yulun Wu)  
+[AlienKevin](https://github.com/AlienKevin) (Kevin Li)  
 [Jimmy Zx](https://github.com/jimmy-zx) (Jimmy Zhao)  
-[wlt233](https://github.com/wlt233)
-[nichujie](https://github.com/nichujie)
+[wlt233](https://github.com/wlt233)  
+[nichujie](https://github.com/nichujie)  

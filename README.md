@@ -13,3 +13,4 @@ Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 [Jimmy Zx](https://github.com/jimmy-zx) (Jimmy Zhao)  
 [wlt233](https://github.com/wlt233)  
 [nichujie](https://github.com/nichujie)  
+[xuyinjie](https://github.com/xuyinjiesh)  

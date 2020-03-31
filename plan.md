@@ -13,7 +13,7 @@
 * 给用户分配session, 开辟空间保存每个用户代码, 载入等等
 * 注意设置权限, 因为 jupyter notebook 可以用 `!command` 调用bash命令  
 * 管理计算资源 e.g. 自动关闭 inactive session
-* 做一个体现主题的外观 可参考jupyter-theme
+* 做一个体现主题的外观 可参考jupyter-theme, 或者用别的方法
 
 
 # 内容

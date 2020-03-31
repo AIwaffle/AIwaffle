@@ -2,7 +2,7 @@
 接下来的课程以jupyter notebook的形式发布
 
 # 效果图
-
+来自[kaggle.com](https://www.kaggle.com/learn/overview)  
 ![image.png](https://i.loli.net/2020/03/31/kiSKpExgebwdFDt.png)
 
 # 工程需求

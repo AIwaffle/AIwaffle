@@ -4,7 +4,7 @@
 AIwaffle aims at AI beginners and provides original courses, extensive materials, and periodic blogs on AI, OI, and more.
 
 Course site: https://www.aiwaffle.com/  
-Total Clicks: https://www.aiwaffle.com/api/statistics/total
+Total Clicks: https://www.aiwaffle.com/api/statistics/total  
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 
 ## Collaborators:

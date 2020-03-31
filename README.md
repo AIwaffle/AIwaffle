@@ -3,8 +3,8 @@
 **an AI Learning Platform completely made by high school students**  
 AIwaffle aims at AI beginners and provides original courses, extensive materials, and periodic blogs on AI, OI, and more.
 
-Course site: http://106.15.39.117:8080  
-Total Clicks: http://106.15.39.117:8080/api/statistics/total  
+Course site: https://www.aiwaffle.com/  
+Total Clicks: https://www.aiwaffle.com/api/statistics/total
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 
 ## Collaborators:

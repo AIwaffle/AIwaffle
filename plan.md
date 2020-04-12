@@ -52,7 +52,7 @@ q0.check()
 ```
 
 ## Topic
-有自己的点子优先, 或者直接联系我我会给你一个topic
-模仿也可取! 参考coursera, Udemy, DataCamp, kaggle, google AI education, ...
+有自己的点子优先, 或者直接联系我我会给你一个topic  
+模仿也可取! 参考coursera, Udemy, DataCamp, kaggle, google AI education, ...  
 如果纯自己写有困难 更可以将已有代码挖空, 加上提示和`learning tool`(上面说的)即可. 可以从别人的代码或我的[kaggle notebook](https://www.kaggle.com/idiott/mnist-shallow-deep-and-cnn)开始着手
 

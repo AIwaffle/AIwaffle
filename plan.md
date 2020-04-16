@@ -24,8 +24,7 @@ Author: Yulun Wu
 
 每一个课程基于jupyter notebook制作, 参考[kaggle](https://www.kaggle.com/learn/overview)
 ## Feature
-
-# [Example Course](https://www.kaggle.com/idiott/aiwaffle-experimental-course)
+**[Example Course!](https://www.kaggle.com/idiott/aiwaffle-experimental-course)**
 
 以代码填空的形式进行
 ```python

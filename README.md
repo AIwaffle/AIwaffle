@@ -7,6 +7,11 @@ Course site: https://www.aiwaffle.com/
 Total Clicks: https://www.aiwaffle.com/api/statistics/total  
 Official blog: https://aiwaffle.github.io/AIwaffle-blog/
 
+## AIwaffle is transferring to jupyter notebooks
+Here are our courses temperarily hosted on kaggle.com  
+[**2D point classification: Logistic Regression**](https://www.kaggle.com/idiott/aiwaffle-experimental-course)  
+[**Classify handwriting digits using shallow, deep, and CNN**](https://www.kaggle.com/xuyinjiesh/mnist-shallow-deep-and-cnn)  
+
 ## Collaborators:
 [IDIOT](https://github.com/IDl0T) (Yulun Wu)  
 [Kevin Li](https://github.com/AlienKevin) (Kevin Li)  

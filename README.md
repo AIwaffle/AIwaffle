@@ -3,9 +3,9 @@
 **an AI Learning Platform completely made by high school students**  
 AIwaffle aims at AI beginners and provides original courses, extensive materials, and periodic blogs on AI, OI, and more.
 
-Course site: https://www.aiwaffle.com/  
-Total Clicks: https://www.aiwaffle.com/api/statistics/total  
-Official blog: https://aiwaffle.github.io/AIwaffle-blog/
+Course site: www.aiwaffle.com  
+Total Clicks: www.aiwaffle.com/api/statistics/total  
+Official blog: blog.aiwaffle.com
 
 ## AIwaffle is transferring to jupyter notebooks
 Here are our courses temperarily hosted on kaggle.com  

@@ -5,7 +5,7 @@ AIwaffle aims at AI beginners and provides original courses, extensive materials
 
 Course site: www.aiwaffle.com  
 Total Clicks: www.aiwaffle.com/api/statistics/total  
-Official blog: blog.aiwaffle.com
+Official blog: [blog.aiwaffle.com](https://blog.aiwaffle.com/)
 
 ## AIwaffle is transferring to jupyter notebooks
 Here are our courses temperarily hosted on kaggle.com  

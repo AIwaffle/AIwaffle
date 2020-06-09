@@ -53,6 +53,8 @@ q0.check()
 #q0.solution()
 ```
 
+或者折叠markdown也可以
+
 ## Topic
 有自己的点子优先, 或者直接联系我我会给你一个topic  
 模仿也可取! 参考coursera, Udemy, DataCamp, kaggle, google AI education, ...  

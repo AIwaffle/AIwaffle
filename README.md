@@ -7,8 +7,18 @@ Course site: www.aiwaffle.com
 Total Clicks: www.aiwaffle.com/api/statistics/total  
 Official blog: [blog.aiwaffle.com](https://blog.aiwaffle.com/)
 
+## Important Files
+[Courses/course-list.md](https://github.com/AIwaffle/AIwaffle/blob/master/Courses/course-list.md)  
+This list defines the official names and order of AIwaffle courses
+
+[plan.md](https://github.com/AIwaffle/AIwaffle/blob/master/plan.md)
+The work plan for the beloved AIwaffle dev team.
+
+[timeline.md](https://github.com/AIwaffle/AIwaffle/blob/master/Courses/course-list.md)  
+Timeline for milestones of AIwaffle
+
 ## AIwaffle is transferring to jupyter notebooks
-Here are our courses temperarily hosted on kaggle.com  
+Here are some of our courses temperarily hosted on kaggle.com  
 The version of courses on aiwaffle.com should keep up with kaggle.com  
 [**2D point classification: Logistic Regression**](https://www.kaggle.com/idiott/aiwaffle-experimental-course)  
 [**Classify handwriting digits using shallow, deep, and CNN**](https://www.kaggle.com/xuyinjiesh/mnist-shallow-deep-and-cnn)  

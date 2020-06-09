@@ -15,3 +15,7 @@ More collaborators. (3 -> 7) More courses. (3 -> 5) :star2:
 
 2020-4-29  
 AIwaffle's jupyter hub is live
+
+2020-6
+AIwaffle's authentication pipeline is improved
+Courses are revamped

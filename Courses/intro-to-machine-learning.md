@@ -1,4 +1,4 @@
-﻿# Intro to Machine Learning
+# Intro To Machine Learning
 
 Welcome to the first course on machine learning by AIwaffle.
 This course intended to give you basic sense about the practical advantages of ML, and make you understand the concept behind the ML technology.
